@@ -27,7 +27,6 @@ error:
 check_multiboot:
     cmp eax, 0x36d76289 ; Compare general purpose register (eax) with value 0x36d76289
                         ; If the values are equal, the cmp instruction sets the zero flag in the FLAGS register.
-
     jne .no_multiboot   ; jump if not equal
     ret
 .no_multiboot:
